@@ -1,0 +1,47 @@
+varInclusiveTax:
+
+1. get selling price from application
+
+	String SellingPrice1 = cm.getPriceWithoutTax();
+	System.out.println("The Actual from application Selling Price is:" +SellingPrice1 );
+	Ex: 49900.00
+	
+2. Convert from String to double:
+	double SellingPrice = Double.parseDouble(SellingPrice1);
+	//Double upto 2 decimal places: 49900.00
+	String SellPrice = String.format("%.2f", SellingPrice);
+		 //or
+	System.out.printf("Double upto 2 decimal places: %.2f",SellingPrice, strDouble);
+		 //or
+	System.out.println("The value of string double is: "+SellPrice);
+	
+3. Get quantity number from application
+    String qtyNo1 = cm.qtyNo();
+    System.out.println("The Quantity Number is"+qtyNo1); //The Quantity Number is1.00, 0
+    //Truncate the extra space and zeros and type cast from string to double
+	double qtyNo = Double.parseDouble(qtyNo1.substring(0, 1)); 
+	System.out.println("The no.of.Qty is:"+ " "+qtyNo); //The no.of.Qty is: 1.0
+	
+4. 
+	
+	
+	
+	 BigDecimal salary3 = new BigDecimal(input).setScale(2, RoundingMode.HALF_UP);
+	      System.out.println("BigDecimal: " + salary3);
+
+	      // convert BigDecimal back to double
+	      double salary4 = salary3.doubleValue();
+	      System.out.println("double : " + salary4);		 //System.out.println("The sell price value with decimal point 0.00"+SP);
+		 String sellP=df.format(SellingPrice);
+		 try {
+	         long l = Long.parseLong(sellP);
+	         System.out.println("long l = " + l);
+	      } catch (NumberFormatException nfe) {
+	         System.out.println("NumberFormatException: " + nfe.getMessage());
+	      }
+
+		// long sellvalue = Long.parseLong(sellP);
+		 System.out.println("The Sell Value is"+sellP);
+		// long CorrectSellPrice = Long.valueOf(df.format(SellingPrice));
+		// System.out.println("The correct Sell Price is"+CorrectSellPrice);
+	

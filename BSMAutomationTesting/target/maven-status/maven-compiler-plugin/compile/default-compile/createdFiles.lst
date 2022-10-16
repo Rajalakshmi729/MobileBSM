@@ -1,0 +1,4 @@
+PageObjects\BaseTest.class
+PageObjects\varInclusiveTaxSale.class
+PageObjects\InclusiveTaxSale.class
+PageObjects\AddSaleMap.class
